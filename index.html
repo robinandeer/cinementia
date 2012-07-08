@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+
+<head id="www-monofra-me" data-template-set="html5-reset">
+
+	<meta charset="utf-8">
+	
+	<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	
+	<title>Cinementia - It Will Test Your Movie Memory!</title>
+	
+	<meta name="title" content="">
+	<meta name="description" content="">
+	<!-- Google will often use this as its description of your page/site. Make it good. -->
+	
+	<meta name="google-site-verification" content="">
+	<!-- Speaking of Google, don't forget to set your site up: http://google.com/webmasters -->
+	
+	<meta name="author" content="Robin Andeer">
+	<meta name="Copyright" content="Copyright Robin Andeer 2012. All Rights Reserved.">
+
+	<!-- Dublin Core Metadata : http://dublincore.org/ -->
+	<meta name="DC.title" content="Cinementia">
+	<meta name="DC.subject" content="What you're about.">
+	<meta name="DC.creator" content="Robin Andeer">
+	
+	<!--  Mobile Viewport Fix: j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+	
+	<!-- Google Web Master Tools -->
+	<meta name="google-site-verification" content="kCKCgN2kFj7GDKqbGTmCpIn_PK0MTfjlhhTVDlOB9w0" />
+	
+	<link rel="shortcut icon" href="favicon.ico">		 
+	<link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+	
+	<!-- CSS: screen, mobile & print are all in the same file -->
+	<link rel="stylesheet" href="_/css/style.css">
+	<link rel="stylesheet" href="_/css/bootstrap.css">
+	
+	<!-- FONTS -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	
+	<!-- all our JS is at the bottom of the page, except for Modernizr. -->
+	<script src="_/js/modernizr-1.7.min.js"></script>
+
+</head>
+
+<body id="play">
+
+<a href="http://www.robinandeer.com/">
+	<?xml version="1.0" standalone="no"?>
+	<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+	<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+	<svg class="frontlogo" viewBox="0 0 100 75" version="1.1"
+		xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+		x="0px" y="0px" height="30px"
+	>
+		<g id="Layer%201">
+			<path d="M 50 50 L 25 50 L 0 75 L 25 75 L 50 75 L 75 75 L 75 50 L 75 25 L 100 0 L 75 0 L 50 0 L 25 0 L 0 0 L 0 25 L 0 50 L 25 50 L 25 25 L 50 25 L 50 50 Z" />
+		</g>
+	</svg>
+</a>
+
+<div class="menu">
+	<div id="menumodal" class="menubtn">
+		<?xml version="1.0" standalone="no"?>
+		<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+		<svg class="menu-icon" viewBox="0 0 30 21" version="1.1"
+			xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+			x="0px" y="0px" width="30px" height="21px"
+		>
+			<g id="Layer%201" class="lines">
+				<rect x="0" y="0" width="30" height="4" />
+				<rect x="0" y="8" width="30" height="4" />
+				<rect x="0" y="16" width="30" height="4" />
+			</g>
+		</svg>
+	</div>
+</div>
+
+<div id="box">
+	
+	<div class="gamelogo">
+		<?xml version="1.0" standalone="no"?>
+		<!-- Generator: Adobe Fireworks CS5, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+		<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+		<svg class="gamelogo-svg" viewBox="0 0 202 51" version="1.1"
+			xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" x="0px" y="0px" width="202px" height="51px">
+			<g id="Layer%201">
+				<g>
+					<path d="M 6.9481 13.9675 C 6.9481 9.3278 9.2747 7 13.928 7 L 17 7 L 17 1 L 13.928 1 C 5.2907 1 0.9721 5.7902 0.9721 14.4158 C 0.9721 23.0574 5.2907 27 13.928 27 L 17 27 L 17 21 L 13.928 21 C 9.2747 21 6.9481 18.6722 6.9481 14.0166 L 6.9481 13.9675 Z" />
+					<path d="M 21 1 L 21 27 L 27 27 L 27 1 L 21 1 Z" />
+					<path d="M 50 27 L 50 10.5867 C 50 3.9541 47.3074 0.6218 41.0606 0.6218 C 34.6862 0.6218 31 3.9541 31 10.5867 L 31 27 L 37 27 L 37 10.0561 C 37 7.4094 38.6702 6.6008 41.0606 6.6008 C 43.3235 6.6008 44 7.9401 44 10.5867 L 44 27 L 50 27 Z" />
+					<path d="M 54 27 L 69.3731 27 L 69.9628 21 L 60 21 L 60 17 L 68 17 L 68 11 L 60 11 L 60 7 L 69.96 7 L 69.3731 1 L 54 1 L 54 27 Z" />
+					<path d="M 95.02 6.6008 C 96.996 6.6008 98 7.6052 98 9.5823 L 98 27 L 104 27 L 104 10.0517 C 104 4.0886 101.004 0.6218 95.044 0.6218 C 91.7134 0.6218 90.0261 1.6263 89.3727 3.6033 C 88.7034 1.6263 86.2866 0.6218 82.9719 0.6218 C 76.98 0.6218 74 3.6193 74 9.5823 L 74 27 L 80 27 L 80 10.0517 C 80 8.0746 80.6112 6.6008 82.6192 6.6008 C 84.5952 6.6008 86 7.6052 86 9.5823 L 86 27 L 92 27 L 92 10.0517 C 92 8.0746 92.988 6.6008 94.996 6.6008 L 95.02 6.6008 Z" />
+					<path d="M 108 1.4694 L 108 27 L 123.4279 27 L 124.0175 21 L 114 21 L 114 17 L 122 17 L 122 11 L 114 11 L 114 7 L 123.96 7 L 123.4279 1 L 108 1 L 108 1.4694 Z" />
+					<path d="M 147 27 L 147 10.5867 C 147 3.9541 143.397 0.6218 137.1501 0.6218 C 130.7757 0.6218 128 3.9541 128 10.5867 L 128 27 L 134 27 L 134 11.0561 C 134 8.4094 134.7597 6.6008 137.1501 6.6008 C 139.413 6.6008 141 7.9401 141 10.5867 L 141 27 L 147 27 Z" />
+					<path d="M 150 1.3992 L 150 7 L 156 7 L 156 27 L 162 27 L 162 7 L 168 7 L 168 1 L 150.1348 1 L 150 1.3992 Z" />
+					<path d="M 172 1 L 172 27 L 178 27 L 178 1 L 172 1 Z" />
+					<path d="M 195 15 L 188 15 L 188 11.014 C 188 8.3673 189.1952 6.6008 191.5856 6.6008 C 193.8485 6.6008 195 7.9401 195 10.5867 L 195 15 ZM 191.5616 0.6218 C 185.1872 0.6218 182 3.9541 182 10.5867 L 182 27 L 188 27 L 188 21 L 195 21 L 195 27 L 201 27 L 201 11.0561 C 201 4.4235 197.8766 0.6218 191.6297 0.6218 L 191.5616 0.6218 Z" />
+				</g>
+				<path id="Line" d="M 2.0398 43.8571 L 85.6318 43.8571 "/>
+				<path id="Line2" d="M 115.3881 43.8571 L 199.9801 43.8571 "/>
+				<g>
+					<path d="M 100.5199 36.7143 L 102.8837 41.4169 L 108.1691 42.171 L 104.3445 45.8314 L 105.2474 51 L 100.5199 48.5597 L 95.7924 51 L 96.6953 45.8314 L 92.8707 42.171 L 98.1562 41.4169 L 100.5199 36.7143 Z" />
+				</g>
+			</g>
+		</svg>
+	</div>
+	<p class="sub">Testing your movie memory, one frame at a time.</p>
+	<div class="links">
+		<p class="resLink play">Play!</p>
+		<p class="resLink resultLink">Results</p>
+	</div>
+		
+	<div id="playarea">
+		<div class="cubebox pushdown">
+		
+			<div class="wrapper score">
+				<p class="summary">Your score</p>
+				<div id="endscore">
+					<?xml version="1.0" standalone="no"?>
+					<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+					<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+					<svg class="star-svg" viewBox="0 0 26 25" version="1.1"
+						xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+						x="0px" y="0px" width="26px" height="25px"
+					>
+						<g id="Layer%201">
+							<path d="M 13.0024 0.272 L 16.2163 9.5181 L 25.9995 9.7173 L 18.2007 15.6309 L 21.0366 25 L 13.0024 19.4092 L 4.9663 25 L 7.8003 15.6309 L -0.0005 9.7173 L 9.7866 9.5181 L 13.0024 0.272 Z" />
+						</g>
+					</svg>
+				</div>
+				<div class="actions">
+					<div class="replay">
+						<?xml version="1.0" standalone="no"?>
+						<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+						<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+						<svg class="replay-svg" viewBox="0 0 18 23" version="1.1"
+							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+							x="0px" y="0px" width="15px" height="17px"
+						>
+							<g id="Layer%201">
+								<path d="M 13.0545 22.6229 C 8.2283 22.6867 3.8986 20.9243 3.8986 16.2405 C 3.8986 11.492 6.0526 10.6275 9.1318 10.598 L 9.1318 15.8313 L 18 7.9142 L 9.1318 0 L 9.1318 4.9173 C 4.6862 4.9202 0 7.1733 0 14.0022 C 0 21.3649 6.0632 24.0742 13.0545 22.6229 L 13.0545 22.6229 Z" />
+							</g>
+						</svg>
+						replay
+					</div>
+					<p class="results resultLink">
+						<?xml version="1.0" standalone="no"?>
+						<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+						<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+						<svg class="bar-svg" viewBox="0 0 11 12" version="1.1"
+							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+							x="0px" y="0px" width="15px" height="20px"
+						>
+							<g id="Layer%201">
+								<g>
+									<path d="M 2.9375 3 L 0 3 L 0 12 L 3 12 L 3 3.0625 L 2.9375 3 ZM 6.9375 6 L 4 6 L 4 12 L 7 12 L 7 6.0625 L 6.9375 6 ZM 10.9375 0 L 8 0 L 8 12 L 11 12 L 11 0.0625 L 10.9375 0 Z" />
+								</g>
+							</g>
+						</svg>
+						results
+					</p>
+				</div>
+			</div>
+		
+		</div><!-- END cubebox -->
+		
+	</div>
+	
+</div><!-- END wrapper -->
+
+<!-- Settings and Info Modal -->
+<div id="myModal" class="modal hide fade" style="display: none; ">
+	<div class="modal-footer">
+		<ul id="menulist" class="idTabs clearfix">
+			<a href="#about"><li>
+				<?xml version="1.0" standalone="no"?>
+				<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg class="about-svg" viewBox="0 0 15 19" version="1.1"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+					x="0px" y="0px" width="15px" height="19px"
+				>
+					<g id="Layer%201">
+						<g>
+							<path d="M 14 2.9375 L 14 18 L 3.0064 18 C 1.7946 18 0.9375 17.2081 0.9375 15.9899 L 0.9375 15.8883 C 0.9375 14.67 1.7946 14 3.0064 14 L 13 14 L 13 0 L 1.9426 0 C 1.0145 0 0 0.8225 0 1.8276 L 0 16.1149 C 0 17.9727 1.2001 19 2.944 19 L 15 19 L 15 3 L 14.0625 3 L 14 2.9375 ZM 13 16 L 3.1247 16 C 2.8587 16 2.6222 15.6868 2.6222 15.3882 C 2.6222 15.1493 2.8587 15 3.1247 15 L 13 15 L 13 15.8361 L 13 16 Z" />
+						</g>
+					</g>
+				</svg>
+				about
+			</li></a>
+			<a href="#settings"><li>
+				<?xml version="1.0" standalone="no"?>
+				<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg class="settings-svg" viewBox="0 0 24 20" version="1.1"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+					x="0px" y="0px" width="24px" height="20px"
+				>
+					<g id="Layer%201">
+						<g>
+							<path d="M 23.669 7.4205 L 23.3391 7.0605 C 23.0991 6.7905 22.6191 6.7005 22.3191 6.9705 C 22.0491 6.9705 21.6891 6.8505 21.4191 6.5805 C 20.8492 5.9505 21.2391 4.8406 20.8492 4.4506 L 19.3097 2.8607 C 18.5597 2.1107 16.4898 -0.2892 11 1.1207 L 11 1.8107 C 11 1.8107 13.7299 1.7807 15.6798 3.7006 C 15.6798 3.7006 16.3793 4.4806 15.6894 5.1706 C 15.5094 5.3806 15.4194 5.4706 15.4194 5.4706 L 15.0594 5.8305 L 17.2793 8.0204 C 17.2793 8.0204 17.7593 7.5105 17.9093 7.3905 C 18.2693 7.0005 19.1992 7.0305 19.9192 7.7805 C 20.4292 8.2604 20.5192 8.8004 20.2492 8.9804 C 20.0992 9.1904 20.2192 9.6404 20.4892 9.8804 L 20.8492 10.2704 C 21.2091 10.6003 21.7191 10.6003 22.0491 10.2704 L 23.669 8.6204 C 23.999 8.2604 23.999 7.7505 23.669 7.4205 L 23.669 7.4205 ZM 13.9194 11.4703 L 16.7693 8.5604 L 14.6094 6.3405 L 11.6395 9.3704 L 9.1496 6.8805 C 8.4597 6.1305 8.2797 5.8305 8.4597 4.9606 C 8.6696 4.0006 8.6696 2.8307 7.4997 1.7807 C 7.3197 1.6307 6.8697 1.3607 6.8697 1.3007 C 5.0398 0.2208 3.0899 1.2107 3.0899 1.2107 L 2.9399 1.4507 C 2.9399 1.4507 4.6198 2.5607 4.8298 2.6807 C 5.0698 2.8307 5.7898 3.6406 4.9198 4.9306 C 4.0798 6.2205 3.1499 5.8005 2.8799 5.5905 C 2.6699 5.4706 0.99 4.3906 0.99 4.3906 L 0.84 4.6306 C 0.84 4.6306 0.72 6.8805 2.5799 8.0804 C 3.4499 8.6504 4.3798 8.6504 5.0398 8.4104 C 5.6998 8.2004 6.1797 8.4404 6.9897 9.2204 L 9.4796 11.6203 L 4.3198 16.4201 C 3.8698 16.8701 3.8698 17.6201 4.3198 18.04 L 5.4898 19.24 C 5.9398 19.69 6.6897 19.69 7.1097 19.24 L 11.6095 13.8102 L 16.4393 18.91 C 17.1893 19.69 18.3893 19.69 19.1692 18.94 C 19.9192 18.16 19.9492 16.9601 19.1992 16.2101 L 13.9194 11.4703 L 13.9194 11.4703 ZM 18.5092 18.28 C 18.1193 18.7 17.4893 18.64 17.0693 18.25 C 16.7093 17.89 16.7093 17.2301 17.0693 16.8401 C 17.4893 16.4501 18.1193 16.4501 18.5092 16.8401 C 18.8992 17.2301 18.8992 17.92 18.5092 18.28 L 18.5092 18.28 Z" />
+						</g>
+					</g>
+				</svg>
+				settings
+			</li></a>
+			<a href="#changelog"><li>
+				<?xml version="1.0" standalone="no"?>
+				<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg class="change-svg" viewBox="0 0 22 18" version="1.1"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+					x="0px" y="0px" width="22px" height="18px"
+				>
+					<g id="Layer%201">
+						<g>
+							<path d="M 21.699 3.9483 L 18.4292 1.0625 L 8.3496 11.7298 L 3.6398 7.1833 L 0.6999 10.0686 L 8.8596 17.9375 L 21.699 3.9483 L 21.699 3.9483 Z" />
+						</g>
+					</g>
+				</svg>
+				changelog
+			</li></a>
+		</ul>
+		<a href="#" class="btn" data-dismiss="modal">
+			<?xml version="1.0" standalone="no"?>
+			<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+			<svg id="Untitled-Page%201" viewBox="0 0 29 29" version="1.1"
+				xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+				x="0px" y="0px" width="21px" height="21px"
+			>
+				<g id="Layer%201">
+					<path d="M 14.0005 0.0005 C 6.2686 0.0005 0.0005 6.2686 0.0005 14.0006 C 0.0005 21.7325 6.2686 28.0006 14.0005 28.0006 C 21.7325 28.0006 28.0005 21.7325 28.0005 14.0006 C 28.0005 6.2686 21.7325 0.0005 14.0005 0.0005 ZM 20.4151 20.4147 C 20.0249 20.8053 19.5127 21.0006 19.001 21.0006 C 18.4893 21.0006 17.9771 20.8053 17.5869 20.4147 L 14.001 16.8287 L 10.4146 20.4152 C 10.0244 20.8058 9.5122 21.0011 9.0005 21.0011 C 8.4888 21.0011 7.9766 20.8058 7.5864 20.4152 C 6.8052 19.6344 6.8052 18.3678 7.5864 17.587 L 11.1729 14.0006 L 7.5869 10.4146 C 6.8057 9.6339 6.8057 8.3673 7.5869 7.5865 C 8.3672 6.8052 9.6348 6.8052 10.4151 7.5865 L 14.001 11.1724 L 17.5865 7.587 C 18.3667 6.8057 19.6343 6.8057 20.4146 7.587 C 21.1958 8.3678 21.1958 9.6344 20.4146 10.4151 L 16.8291 14.0006 L 20.4151 17.5865 C 21.1963 18.3673 21.1963 19.6339 20.4151 20.4147 Z" />
+				</g>
+			</svg>
+		</a>
+	</div>
+	
+	<div id="about" class="menubox">
+		<ul class="segments">
+			<li>
+				<h3>What is this?</h3>
+				<p>MonoFra.me is a movie memory guessing game. You're asked to identify a movie from a single frame. Simple as that.</p>
+				<div class="feature overview"></div>
+			</li>
+			
+			<li>
+				<h3>Local</h3>
+				<p>The game stores all progress locally in your browser. It is pretty permanent but for now, you can't bring your results with you between computers (unless you're tech savvy and know what HTML5 localStorage is). You can however very easily compare highscores with anyone who played the game on a single computer!</p>
+				<div class="feature scorecard"></div>
+			</li>
+			
+			<li>
+				<h3>Features</h3>
+				<p>The current lack of features is all part of the plan...to get the site up and running...<i>and</i> to avoid responsibility for your data. But hey, highscore and basic leveling already works!</p>
+				<div class="feature highscore"></div>
+			</li>
+			
+			<li id="creator">
+				<h3>Creator</h3>
+				<?xml version="1.0" standalone="no"?>
+				<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg class="femtologo" viewBox="0 0 100 75" version="1.1"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+					x="0px" y="0px" width="100px" height="75px"
+				>
+					<g id="Layer%201">
+						<path d="M 50 50 L 25 50 L 0 75 L 25 75 L 50 75 L 75 75 L 75 50 L 75 25 L 100 0 L 75 0 L 50 0 L 25 0 L 0 0 L 0 25 L 0 50 L 25 50 L 25 25 L 50 25 L 50 50 Z" />
+					</g>
+				</svg>
+				<p>Robin Andeer, a biotech student in denial. For some time, I've wanted to create a proof-of-concept web project around movies and a game finally made the most sense. Big thanks to Google App Engine for free web hosting. You can find more about me here: <a href="http://www.robinandeer.com/">www.robinandeer.com</a></p>
+			</li>
+		</ul>
+	</div>
+	<div id="settings" class="menubox">
+		<ul class="segments">
+			<li>
+				<div class="setting" id="deleteHighscore">
+					Reset highscore:
+					<div id="delete">
+						<?xml version="1.0" standalone="no"?>
+						<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+						<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+						<svg viewBox="0 0 16 21" version="1.1"
+							xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+							x="0px" y="0px" width="16px" height="21px" onclick="amplify.store( 'score', 0 );">
+							<g>
+								<path d="M 7 17 C 7 17.5527 7.4473 18 8 18 L 8 18 C 8.5527 18 9 17.5527 9 17 L 9 9 C 9 8.4473 8.5527 8 8 8 L 8 8 C 7.4473 8 7 8.4473 7 9 L 7 17 Z" />
+								<path d="M 10 17 C 10 17.5527 10.4473 18 11 18 L 11 18 C 11.5527 18 12 17.5527 12 17 L 12 9 C 12 8.4473 11.5527 8 11 8 L 11 8 C 10.4473 8 10 8.4473 10 9 L 10 17 Z" />
+								<path d="M 4 17 C 4 17.5527 4.4473 18 5 18 L 5 18 C 5.5527 18 6 17.5527 6 17 L 6 9 C 6 8.4473 5.5527 8 5 8 L 5 8 C 4.4473 8 4 8.4473 4 9 L 4 17 Z" />
+								<path d="M 13 4 L 13 3 C 13 0.7988 11.2061 0 10 0 L 6 0 C 3.7988 0 3 1.7939 3 3 L 3 4 C 0 4 0 7 0 7 L 1 7 L 1 20 C 1 20.5527 1.4473 21 2 21 L 14 21 C 14.5527 21 15 20.5527 15 20 L 15 7 L 16 7 C 16 4 13 4 13 4 ZM 5 3.0117 C 5.0117 2.5498 5.1943 2 6 2 L 9.9883 2 C 10.4502 2.0117 11 2.1943 11 3 L 11 4 L 5 4 L 5 3.0117 ZM 13 19 L 3 19 L 3 7 L 13 7 L 13 19 Z" />
+							</g>
+						</svg>
+					</div>
+				</div>
+			</li>
+			
+			<li>
+				<div class="setting">Name tag (edit): <p id="nametag" contenteditable="true">Anonymous</p></div>
+			</li>
+		</ul>
+	</div>
+	<div id="changelog" class="menubox">
+		<ul class="segments">
+			<li>
+				<h3>1.0 - Barrelhaven</h3>
+				<ul class="changelog">
+					<li>Marathon game mode</li>
+					<li>Local highscore</li>
+					<li>Database size: ~400 movies</li>
+				</ul>
+			</li>
+			
+			<!--<li>
+				<h3 class="coming">1.1 - Phoncible</h3>
+				<ul class="changelog coming">
+					<li>User contributions</li>
+					<li>User login, central db</li>
+					<li>Full ajax support</li>
+				</ul>
+			</li>-->
+		</ul>
+	</div>
+</div>
+
+<!-- Results Modal -->
+<div id="resultsModal" class="modal hide fade" style="display: none; ">
+	<div class="modal-footer">
+		<ul id="menulist" class="idTabs clearfix">
+			<a href="#profilePanel"><li>
+				<?xml version="1.0" standalone="no"?>
+				<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg class="profile-svg" viewBox="0 0 26 21" version="1.1"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+					x="0px" y="0px" width="26px" height="21px"
+				>
+					<g id="Layer%201">
+						<path d="M 14 0 L 12 0 C 11.4478 0 11 0.4473 11 1 L 11 5 C 11 5.5527 11.4478 6 12 6 L 14 6 C 14.5522 6 15 5.5527 15 5 L 15 1 C 15 0.4473 14.5522 0 14 0 ZM 13 5 C 12.4478 5 12 4.5527 12 4 C 12 3.4473 12.4478 3 13 3 C 13.5522 3 14 3.4473 14 4 C 14 4.5527 13.5522 5 13 5 ZM 24 3 L 16 3 L 16 5 L 24 5 L 24 19 L 2 19 L 2 5 L 10 5 L 10 3 L 2 3 C 0.8955 3 0 3.8955 0 5 L 0 19 C 0 20.1045 0.8955 21 2 21 L 24 21 C 25.1045 21 26 20.1045 26 19 L 26 5 C 26 3.8955 25.1045 3 24 3 ZM 17 13.5 C 17 13.7764 17.2236 14 17.5 14 L 21.5 14 C 21.7764 14 22 13.7764 22 13.5 C 22 13.2236 21.7764 13 21.5 13 L 17.5 13 C 17.2236 13 17 13.2236 17 13.5 ZM 15 11.5 C 15 11.7764 15.2236 12 15.5 12 L 21.5 12 C 21.7764 12 22 11.7764 22 11.5 C 22 11.2236 21.7764 11 21.5 11 L 15.5 11 C 15.2236 11 15 11.2236 15 11.5 ZM 15 9.5 C 15 9.7764 15.2236 10 15.5 10 L 21.5 10 C 21.7764 10 22 9.7764 22 9.5 C 22 9.2236 21.7764 9 21.5 9 L 15.5 9 C 15.2236 9 15 9.2236 15 9.5 ZM 15 7.5 C 15 7.7764 15.2236 8 15.5 8 L 21.5 8 C 21.7764 8 22 7.7764 22 7.5 C 22 7.2236 21.7764 7 21.5 7 L 15.5 7 C 15.2236 7 15 7.2236 15 7.5 ZM 4 17 L 14.832 17 C 14.832 17 14.792 15.666 14.7378 15.5186 C 14.6797 15.3711 14.7051 15.1553 14.4556 14.9893 C 14.2051 14.8252 14.188 14.8408 13.5947 14.5518 C 13.2593 14.3936 12.9087 14.2666 12.562 14.1377 C 12.2441 14.0146 11.9258 13.9023 11.6094 13.7764 C 11.3975 13.6904 11.248 13.5313 11.0952 13.3662 C 11.0386 13.3076 10.978 13.2422 10.9395 13.1719 C 10.8896 13.0752 10.9111 12.9883 10.769 13.0098 C 10.6226 13.0293 10.665 12.7412 10.665 12.7412 C 10.665 12.7412 10.8408 12.6338 10.8965 12.458 C 10.9448 12.292 11.0332 11.6387 11.0332 11.6387 C 11.0332 11.6387 11.1299 11.6582 11.2095 11.5986 C 11.2998 11.542 11.4194 11.375 11.5161 10.332 C 11.5317 10.1162 11.4038 10.2158 11.4038 10.2109 C 11.3462 9.9287 11.5488 9.7363 11.4756 8.7197 C 11.4614 8.5254 11.4272 8.3359 11.3169 8.1709 C 11.2188 8.0186 11.1348 7.8584 11.0288 7.7139 C 10.958 7.6152 10.8604 7.5166 10.7544 7.4502 C 10.2607 7.1465 9.6836 6.9883 9.1021 7.001 C 8.9771 7.0029 8.8677 7.0322 8.748 7.0713 C 8.4819 7.165 8.5068 7.165 8.3794 7.2373 C 8.2979 7.2852 8.2354 7.3301 8.1802 7.4014 C 8.1318 7.4678 8.0923 7.5283 8.0039 7.5303 C 7.5996 7.5469 7.5352 7.9385 7.4126 8.249 C 7.3159 8.4648 7.3003 8.6289 7.3159 8.75 C 7.3315 8.8857 7.355 8.9609 7.3857 9.2344 C 7.4092 9.4326 7.4082 9.6367 7.4292 9.8398 C 7.4375 9.9082 7.4717 9.9717 7.4829 10.0391 C 7.5063 10.1719 7.4277 10.0957 7.3857 10.1846 C 7.355 10.2725 7.3857 10.7383 7.4434 10.9355 C 7.501 11.1426 7.5073 11.4316 7.5957 11.5225 C 7.6865 11.627 7.7017 11.5625 7.7988 11.5986 L 7.8411 11.6201 C 7.8454 11.6303 7.8239 11.6515 7.8716 11.7832 C 7.9355 11.9785 7.9106 12.1543 7.9761 12.3828 C 8.063 12.7217 8.2158 12.5938 8.2578 12.7725 C 8.2886 12.957 8.2246 12.957 8.2246 12.957 C 8.2246 12.957 8.0728 12.9385 7.9912 12.9883 C 7.8887 13.0537 7.8247 13.251 7.7715 13.3555 C 7.7129 13.4668 7.6636 13.623 7.541 13.6885 C 7.2437 13.8389 6.9019 13.9277 6.5894 14.0498 C 6.3013 14.1572 6.0127 14.2598 5.728 14.376 C 5.6362 14.4131 5.5425 14.4492 5.4551 14.4922 C 5.2061 14.6279 4.772 14.7529 4.5537 14.9004 C 4.3433 15.0479 4.0947 15.333 4.0947 15.5186 C 4.0947 15.71 4 17 4 17 Z" />
+					</g>
+				</svg>
+				profile
+			</li></a>
+			<a href="#highscorePanel"><li>
+				<?xml version="1.0" standalone="no"?>
+				<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+				<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+				<svg class="highscore-svg" viewBox="0 0 24 24" version="1.1"
+					xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+					x="0px" y="0px" width="21px" height="21px"
+				>
+					<g id="Layer%201">
+						<g>
+							<path d="M 16.4663 11.5781 C 16.9565 11.4414 17.5815 11.2539 18.3716 11 C 24.7681 8.9492 23.9692 1 23.9692 1 L 20.6099 1 L 19.0005 1 L 19.0005 0 L 5.001 0 L 5.001 1 L 3.3931 1 L 0.0342 1 C 0.0342 1 -0.7729 8.9785 5.6318 11 C 6.4155 11.248 7.0381 11.4336 7.5298 11.5684 C 8.5 12.748 9.6934 13.5859 11.0015 13.875 L 11.0015 21.0332 C 7.6104 21.2422 5.0015 22.4902 5.0015 24 L 19.0015 24 C 19.0015 22.4902 16.3931 21.2422 13.0015 21.0332 L 13.0015 13.875 C 14.3062 13.5859 15.4976 12.7539 16.4663 11.5781 ZM 19.0005 4.3066 L 19.0005 2 L 20.6099 2 L 23.0063 2 C 22.9917 3.9863 22.4741 8.6367 18.0659 10.0488 C 17.8149 10.1289 17.5913 10.1992 17.3784 10.2656 C 18.3911 8.5352 19.0015 6.4043 19.0015 4.3066 L 19.0005 4.3066 ZM 5.9331 10.0469 C 1.5195 8.6523 1.0078 3.9863 0.9966 2 L 3.3931 2 L 5.001 2 L 5.001 4.3066 C 5.001 6.4043 5.6104 8.5332 6.6216 10.2617 C 6.4087 10.1953 6.1841 10.125 5.9331 10.0469 ZM 12.002 8.8496 L 8.9111 11 L 10.002 7.3984 L 7.0015 5.1211 L 10.7656 5.0449 L 12.002 1.4902 L 13.2388 5.0449 L 17.0015 5.1211 L 14.0015 7.3984 L 15.0923 11 L 12.002 8.8496 Z" />
+						</g>
+					</g>
+				</svg>
+				highscore
+			</li></a>
+		</ul>
+		<a href="#" class="btn" data-dismiss="modal">
+			<?xml version="1.0" standalone="no"?>
+			<!-- Generator: Adobe Fireworks CS6, Export SVG Extension by Aaron Beall (http://fireworks.abeall.com) . Version: 0.6.1  -->
+			<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+			<svg id="Untitled-Page%201" viewBox="0 0 29 29" version="1.1"
+				xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve"
+				x="0px" y="0px" width="21px" height="21px"
+			>
+				<g id="Layer%201">
+					<path d="M 14.0005 0.0005 C 6.2686 0.0005 0.0005 6.2686 0.0005 14.0006 C 0.0005 21.7325 6.2686 28.0006 14.0005 28.0006 C 21.7325 28.0006 28.0005 21.7325 28.0005 14.0006 C 28.0005 6.2686 21.7325 0.0005 14.0005 0.0005 ZM 20.4151 20.4147 C 20.0249 20.8053 19.5127 21.0006 19.001 21.0006 C 18.4893 21.0006 17.9771 20.8053 17.5869 20.4147 L 14.001 16.8287 L 10.4146 20.4152 C 10.0244 20.8058 9.5122 21.0011 9.0005 21.0011 C 8.4888 21.0011 7.9766 20.8058 7.5864 20.4152 C 6.8052 19.6344 6.8052 18.3678 7.5864 17.587 L 11.1729 14.0006 L 7.5869 10.4146 C 6.8057 9.6339 6.8057 8.3673 7.5869 7.5865 C 8.3672 6.8052 9.6348 6.8052 10.4151 7.5865 L 14.001 11.1724 L 17.5865 7.587 C 18.3667 6.8057 19.6343 6.8057 20.4146 7.587 C 21.1958 8.3678 21.1958 9.6344 20.4146 10.4151 L 16.8291 14.0006 L 20.4151 17.5865 C 21.1963 18.3673 21.1963 19.6339 20.4151 20.4147 Z" />
+				</g>
+			</svg>
+		</a>
+	</div>
+	
+	<div id="profilePanel" class="menubox">
+		<h4></h4>
+		<div id="editcontent">edit</div>
+		<div class="xpbox">
+			<p id="xp"></p>
+			<p id="level"></p>
+			<div class="progress"></div>
+		</div>
+		<p>Games played:</p>
+		<div class="bignumber"></div>
+	</div>
+	<div id="highscorePanel" class="menubox">
+		<ul id="highscorelist" class="clearfix">
+			
+		</ul>
+	</div>
+</div>
+
+<!-- PRELOAD IMAGES -->
+<div id="preload">
+	<img src="img/ajax-loader.gif" alt="" />
+</div>
+
+<script>
+/mobile/i.test(navigator.userAgent) && !window.location.hash && setTimeout(function () {
+  window.scrollTo(0, 1);
+}, 1000);
+</script>
+
+<!-- here comes the javascript -->
+
+<!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script>window.jQuery || document.write("<script src='_/js/jquery-1.7.2.min.js'>\x3C/script>")</script>
+
+<!-- this is where we put our custom functions -->
+<script src="_/js/plugins.js"></script>
+<script src="_/js/functions.js"></script>
+
+<script>
+	/*$('.resLink, #play-help').remove();$('.play').toggleClass('play reload');
+	$('#ajaxloader').remove();
+	$('#box').css('padding-top', '0');
+	$('header, #menu-help, #play-help').hide();
+	$('#playarea').addClass('activate');
+	$('.score').css('opacity', '1');
+	//$('#endscore').html(930 + 'p');*/
+	
+	
+</script>
+
+<!-- Asynchronous google analytics; this is the official snippet.
+	 Replace UA-XXXXXX-XX with your site's ID and uncomment to enable.
+	 
+<script>
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-XXXXXX-XX']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+-->
+  
+</body>
+</html>
