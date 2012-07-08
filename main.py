@@ -46,7 +46,9 @@ class Ajax(webapp.RequestHandler):
 	def get(self):
 		# Parse XML directly from the file path
 		db = ElementTree()
-		parsed = db.parse("db.xml")
+		
+		path = os.path.join (os.path.dirname (__file__), 'db.xml')
+		parsed = db.parse(path)
 		
 		# Set up a container for basic information:
 		# => Amount to disp, total amount

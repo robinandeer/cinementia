@@ -94,7 +94,6 @@ input[type="radio"] {
 
 input[type="checkbox"] {
 	vertical-align: bottom;
-	*vertical-align: baseline;
 }
 
 .ie6 input {
@@ -242,7 +241,7 @@ html,body {
 	width: 100%;
 }
 
-body#play {
+body {
 	background: url(../../img/wall.jpg) no-repeat center top #000000;
 	-webkit-transition: all .5s ease-in-out;
 	-moz-transition: all .5s ease-in-out;
@@ -251,27 +250,11 @@ body#play {
 	transition: all .5s ease-in-out;
 }
 
-body#results {
-	background: #f0f0f0;
-}
-
 #box {
 	padding-top: 10px;
 	padding-bottom: 50px;
 	margin-top: 80px;
-}
-
-#play #box {
 	height: 530px;
-}
-
-#results #box {
-	min-width: 800px;
-	width: 80%;
-	margin-right: auto;
-	margin-left: auto;
-	padding-top: 0;
-	margin-top: 40px;
 }
 
 /* @group TYPOGRAPHY */
