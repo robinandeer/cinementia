@@ -42,10 +42,9 @@ function ajaxMovies(amount) {
 				$.loadImages(data.imgs, function() {
 					// Hide & Show
 					$('.play').toggleClass('play reload');
-					$('#ajaxloader, .sub').remove();
+					$('#ajaxloader, .sub, .links, .step1, .step2, .step3, .hint').remove();
 					$('.gamelogo').css('margin-bottom', '30px')
-					$('#box').css('padding-top', '0');
-					$('header, #menu-help, #play-help').hide();
+					$('#box').css('padding-top', '1%');
 					$('#playarea').addClass('activate');
 					$.sticky('And so it begins... Good luck!');
 				});
@@ -139,13 +138,21 @@ var player = {
 // Write nametag
 $('#nametag').html(player.nametag);
 
+// Check if first-timer
+if (amplify.store().playcount == 0) {
+	setTimeout("$('.links').append('<div class=\"step1\">1</div><div class=\"hint\">First time? Click here to enter a username!</div>');", 2000);
+	setTimeout("$('.menu').append('<div class=\"step2\">2</div><div class=\"hint sec\">...and here to learn more about the game.</div>');", 2500);
+	setTimeout("$('body').prepend('<div class=\"step3\">3</div><div class=\"hint third\">Any feedback is greatly appreciated!</div>');", 3000);
+	
+}
+
 // **** FUNCTIONS **** \\
 // Add or remove lives from the player-obj
 function changeLife(change, movie) {
 	player.lifeForce += change;
 	
-	// Update DOM	
-	$.sticky(movie + '<br>' + 'Life: ' + player.lifeForce);
+	// Update DOM
+	$.sticky(movie); //  + '<br>' + 'Life: ' + player.lifeForce
 	
 	// Check if player is Still Alive
 	if (player.lifeForce > 0) {
@@ -330,6 +337,7 @@ $('.choices li').live('click', function() {
 $('#editcontent').live('click', function() {
 	$(this).html('save').addClass('save2local').css('top', '3px');
 	$('h4').replaceWith('<input type="text" name="nametag" value="" placeholder="' + $('h4').text() + '" class="nametag-input" />');
+	$('.nametag-input').focus();
 });
 
 $('.save2local').live('click', function() {

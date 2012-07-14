@@ -1,10 +1,10 @@
 from google.appengine.ext import webapp
 from google.appengine.ext.webapp.util import run_wsgi_app
 import os, random
-import simplejson as json
+import json
 from xml.sax import saxutils
 from google.appengine.ext.webapp import template
-from xml.etree.cElementTree import ElementTree
+from lxml import etree as ElementTree
 from random import choice, sample
 
 class Box():
@@ -44,11 +44,8 @@ class MainPage(webapp.RequestHandler):
 
 class Ajax(webapp.RequestHandler):
 	def get(self):
-		# Parse XML directly from the file path
-		db = ElementTree()
-		
 		path = os.path.join (os.path.dirname (__file__), 'db.xml')
-		parsed = db.parse(path)
+		parsed = ElementTree.parse(path)
 		
 		# Set up a container for basic information:
 		# => Amount to disp, total amount
@@ -74,9 +71,9 @@ class Ajax(webapp.RequestHandler):
 			altLi = ''
 			for cho in choices:
 				if cho == 4:
-					altLi += '<li style="background-image: url(img/title_thumb/'+ movie.imdb +'.png)" title="'+ movie.title +'" class="correct"></li>'
+					altLi += '<li style="background-image: url(img/title_thumb/'+ movie.imdb +'.png)" title="'+ movie.title +'" class="correct"><p class="title-help">'+ movie.title +'</p></li>'
 				else:
-					altLi += '<li style="background-image: url(img/title_thumb/'+ movie.alts[cho-1].imdb +'.png)" title="'+ movie.alts[cho-1].title +'"></li>'
+					altLi += '<li style="background-image: url(img/title_thumb/'+ movie.alts[cho-1].imdb +'.png)" title="'+ movie.alts[cho-1].title +'"><p class="title-help">'+ movie.alts[cho-1].title +'</p></li></li>'
 
 			comboList.append('\
 			<div class="wrapper qd" id="movie'+ str(movie.count) +'"> \

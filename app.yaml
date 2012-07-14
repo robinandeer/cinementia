@@ -1,7 +1,8 @@
 application: monoframe2
-version: 1
-runtime: python
+version: 27
+runtime: python27
 api_version: 1
+threadsafe: no
 
 handlers:
 - url: /(.*\.(gif|png|jpg|ico|js|css))
@@ -10,3 +11,13 @@ handlers:
   
 - url: /.*
   script: main.py
+
+error_handlers:
+  - file: 404.html
+
+  - error_code: over_quota
+    file: over_quota.html
+
+libraries:
+- name: lxml
+  version: "latest"
