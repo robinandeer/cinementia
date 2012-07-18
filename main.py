@@ -38,13 +38,13 @@ class Alts:
 class MainPage(webapp.RequestHandler):
     def get(self):		
 		q = 'index.html'
-		path = os.path.join (os.path.dirname (__file__), q)
+		path = os.path.join(os.path.dirname (__file__), q)
 		self.response.headers ['Content-Type'] = 'text/html'
 		self.response.out.write (template.render (path, {}))
 
 class Ajax(webapp.RequestHandler):
 	def get(self):
-		path = os.path.join (os.path.dirname (__file__), 'db.xml')
+		path = os.path.join(os.path.dirname (__file__), 'db.xml')
 		parsed = ElementTree.parse(path)
 		
 		# Set up a container for basic information:
@@ -54,8 +54,8 @@ class Ajax(webapp.RequestHandler):
 					int(self.request.get('lastMovie'))+1 ) # Find out which is the last movie right now
 		
 		# Select random movies 
-		box.randomMovies = [random.randint(1, box.totalAmount) for r in xrange(box.amountToDisp)]
-				
+		box.randomMovies = random.sample(xrange(0,box.totalAmount+1), box.amountToDisp)
+		
 		# Get a list of movies
 		getMovies(parsed, box)
 		
@@ -64,7 +64,7 @@ class Ajax(webapp.RequestHandler):
 		imgs = []
 		# Generate random list to lay out choices
 		choices = range(1,5)
-		for movie in box.movieList:
+		for movie, numID in zip(box.movieList, box.randomMovies):
 			# Shuffle movie alternatives
 			random.shuffle(choices)
 			# Make up the choice li's
@@ -95,80 +95,12 @@ class Ajax(webapp.RequestHandler):
 			else:
 				difficulty = 30
 			
-			list.append({'title': movie.title, 'id': movie.imdb, 'genre': movie.genre, 'country': movie.country, 'frame': difficulty, 'order': movie.count})
+			list.append({'title': movie.title, 'id': movie.imdb, 'genre': movie.genre, 'country': movie.country, 'frame': difficulty, 'order': movie.count, 'numID': numID})
 		
 		# Reverse and join combo for proper output
 		comboList.reverse()
 		comboString = ''.join(comboList)
 		results = {'html': comboString, 'movies': list, 'imgs': imgs}
-		
-		self.response.headers ['Content-Type'] = 'application/json'
-		self.response.out.write(json.dumps(results))
-
-class Results(webapp.RequestHandler):
-	def get(self):
-		path = os.path.join(os.path.dirname(__file__), 'results.html')
-		self.response.out.write(template.render(path, {}))
-
-class AjaxResults(webapp.RequestHandler):
-	def get(self):
-		#Parse XML directly from the file path
-		db = ElementTree()
-		parsed = db.parse("db.xml")
-		
-		completed = self.request.get('m')
-		
-		completed = completed.split('x')
-		
-		# List for 5 categories
-		combo = ['','','','','']
-		catCount = [0,0,0,0,0]
-		for movie in completed:
-			xmlMovie = parsed.find(movie)
-			
-			year = int(xmlMovie.get('year'))
-			if year < 1990:
-				category = 0
-				catCount[0] += 1
-			elif year >= 1990 and year < 2000:
-				category = 1
-				catCount[1] += 1
-			elif year >= 2000 and year < 2006:
-				category = 2
-				catCount[2] += 1
-			elif year >= 2006 and year < 2011:
-				category = 3
-				catCount[3] += 1
-			else:
-				category = 4
-				catCount[4] += 1
-			
-			combo[category] += '<li class="poster"> \
-				<ul class="marker"> \
-					<li class="mark easy"></li> \
-					<li class="mark medi"></li> \
-					<li class="mark hard"></li> \
-				</ul> \
-				<div class="genre ' + xmlMovie.get('genre') + '"></div> \
-				<p class="title">'
-			# Add title
-			combo[category] += xmlMovie.get('title')
-				
-			# Add director
-			combo[category] += '</p><p class="director">' + xmlMovie.get('director')
-			
-			combo[category] += ' (' + xmlMovie.get('year') + ')</p></li>'
-		
-		statBox = parsed.find('categories')
-		stats = []
-		counter = 0
-		# Get and calculate the stats
-		for era in ['y_1989', 'y1990_1999', 'y2000_2005', 'y2006_2010', 'y2011_']:
-			stats += [float(catCount[counter])/int(statBox.get(era))*100]
-			counter += 1
-			
-		# make "JSON"
-		results = {'html': combo, 'stats': stats}
 		
 		self.response.headers ['Content-Type'] = 'application/json'
 		self.response.out.write(json.dumps(results))
@@ -254,8 +186,6 @@ def getLevel(box, movie):
 application = webapp.WSGIApplication([
   ('/', MainPage),
   ('/addmore', Ajax),
-  ('/results', Results),
-  ('/getresults', AjaxResults)
 ], debug=True)
 
 def main():

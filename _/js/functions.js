@@ -33,7 +33,9 @@ function ajaxMovies(amount) {
 		function( data ) {
 			
 			if (game.currentMovie === null) {
-				window.tempData = data;
+				
+				// Save for debug
+				//window.tempData = data;
 				
 				// Before preload (spinner etc)
 				$('<img id="ajaxloader" src="img/ajax-loader.gif">').insertAfter(".sub");
@@ -58,15 +60,15 @@ function ajaxMovies(amount) {
 			
 			// Set up game
 			for (var movie in data.movies){
-				console.log(data.movies[movie]);
 				// Create new movie object and add to list
 				var tempMovie = {
-					title: data.movies[movie].title,
-					order: data.movies[movie].order,
-					difficulty: data.movies[movie].frame,
-					id: data.movies[movie].id,
-					genre: data.movies[movie].genre,
-					country: data.movies[movie].country
+					'title': data.movies[movie].title,
+					'order': data.movies[movie].order,
+					'difficulty': data.movies[movie].frame,
+					'id': data.movies[movie].id,
+					'genre': data.movies[movie].genre,
+					'country': data.movies[movie].country,
+					'numID': data.movies[movie].numID
 				};
 				addMovie(tempMovie);
 				// Add title to list for autocomplete
@@ -142,7 +144,7 @@ $('#nametag').html(player.nametag);
 if (amplify.store().playcount == 0) {
 	setTimeout("$('.links').append('<div class=\"step1\">1</div><div class=\"hint\">First time? Click here to enter a username!</div>');", 2000);
 	setTimeout("$('.menu').append('<div class=\"step2\">2</div><div class=\"hint sec\">...and here to learn more about the game.</div>');", 2500);
-	setTimeout("$('body').prepend('<div class=\"step3\">3</div><div class=\"hint third\">Any feedback is greatly appreciated!</div>');", 3000);
+	setTimeout("$('body').prepend('<div class=\"step3\">3</div><div class=\"hint third\">Too easy or too hard? Any feedback is greatly appreciated!</div>');", 3000);
 	
 }
 
@@ -166,16 +168,26 @@ function changeLife(change, movie) {
 }
 
 function theEnd() {
-	// Show score-card
-	$('.score').css('opacity', '1');
-	
-	// Hide all else
-	$('.wrapper:not(".score")').toggle();
-	
 	// POPULATE SCORE CARD
 	
 	// Award xp
 	player.xpincrease = player.score;
+	
+	// Place callback
+	if (player.score < 100) {
+		var callback = 'A meager attempt.';
+	} else if (player.score < 500) {
+		var callback = 'Nothing to write home about.';
+	} else if (player.score < 1000) {
+		var callback = 'Your getting there!';
+	} else if (player.score < 5000) {
+		var callback = 'A valiant effort.';
+	} else if (player.score < 8000) {
+		var callback = 'Stupendous!';
+	} else if (player.score >= 8000) {
+		var callback = 'Wow! And that took you how long?';
+	}
+	$('.callback').html(callback);
 	
 	// BACK-END
 	// Find where to put new high score
@@ -211,6 +223,11 @@ function theEnd() {
 	amplify.store( 'xp', player.xp + player.xpincrease );
 	amplify.store( 'playcount', player.playcount + 1 );
 	
+	// Show score-card
+	$('.score').css('opacity', '1');
+	// Hide all else
+	$('.wrapper:not(".score")').toggle();
+	
 	// NOTIFY & Update results
 	setTimeout( "$.sticky('The End. Please reload to try again!'); 	updateResults();", 1500 );
 	
@@ -239,7 +256,6 @@ function flip2Next() {
 	
 	// Get more movies from server every fifth completed answer
 	if (game.currentMovie.order%5 == 0) {
-		console.log(game); // Save temp
 		ajaxMovies(5);
 	}
 	
@@ -301,13 +317,13 @@ $('.choices li').live('click', function() {
 		// Set score notification and show floater
 		$('#playarea').append('<div class="scorefloater floating">+' + increase + ' xp</div>');
 		player.chain += 10;
-		player.corrects += 1;
+//		player.corrects += 1;
 		// Keep track of corrects/genre for possible bonus
 		player.genreCount[game.currentMovie.genre] += 1;
 		
 		// Save correct answer in "localStorage"
-		if (player.completed && !player.completed['mov'+ game.currentMovie.id]) {
-			player.completed['mov'+ game.currentMovie.id] = [];
+		if (player.completed && !player.completed['mov'+game.currentMovie.numID]) {
+			player.completed['mov'+game.currentMovie.numID] = game.currentMovie.id;
 		}
 		
 		// Wait and send to next Q

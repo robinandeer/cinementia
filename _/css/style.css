@@ -543,12 +543,13 @@ h3 {
 	text-align: center;
 	color: #ffffff;
 	font-size: 11px;
-	margin-bottom: 50px;
-	font-weight: bold;
 	text-transform: uppercase;
 	width: 340px;
-	margin-right: auto;
+	font-weight: bold;
+	opacity: 1;
+	margin-bottom: 50px;
 	margin-left: auto;
+	margin-right: auto;
 }
 
 .links {
@@ -643,7 +644,7 @@ h3 {
 }
 .sec {
 	right: -179px;
-	top: 56px;
+	top: 59px;
 }
 .third {
 	top: 65px;
@@ -1072,12 +1073,12 @@ h3 {
   }
 
 .qd {
-	-webkit-transform: translateX(-900px);
+	-webkit-transform: translateX(-1200px);
 	opacity: 0;
 }
 
 .fin {
-	-webkit-transform: translateX(900px);
+	-webkit-transform: translateX(1200px);
 	opacity: 0;
 }
   
@@ -1143,14 +1144,14 @@ h3 {
 	float: left;
 }
 
-.summary, .replay, .results {
+.summary, .replay, .results, .callback {
 	text-align: center;
 	color: #940000;
 	text-transform: lowercase;
 }
 
 .summary {
-	margin-top: 130px;
+	margin-top: 90px;
 	color: #cc0000;
 }
 
@@ -1165,6 +1166,12 @@ h3 {
 	position: relative;
 	top: -5px;
 	color: #7c0000;
+}
+
+.callback {
+	margin-top: 30px;
+	color: #cc0000;
+	text-transform: inherit;
 }
 
 .actions {
